@@ -7,10 +7,56 @@
 body {
   font-family: 'Roboto', sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-color: bisque;
+}
+
+.container {
+  height: 50px;
+  /* make position relative so can control where to place button */
+  position: relative;
+}
+
+.container .input {
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  background: #edebd7;
+  padding: 15px;
+  transition: width 0.3s ease;
+  border: none;
+}
+
+.container .btn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  background: #edebd7;
+  border: 5px solid black;
+}
+
+.container.active .input {
+  width: 200px;
+}
+
+.container.active .btn {
+  transform: translateX(198px);
+  border: 1px solid black;
+}
+
+.input:focus {
+  color: brown;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
 }
