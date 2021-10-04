@@ -8,6 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
@@ -59,4 +60,13 @@ body {
 .btn:focus,
 .input:focus {
   outline: none;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 0;
+  /* margin-bottom: 20px; */
+  /* border: 1px solid black; */
+  position: relative;
+  transform: translateY(-20px);
 }
